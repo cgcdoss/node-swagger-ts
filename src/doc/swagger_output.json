@@ -1,0 +1,95 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "REST API",
+    "description": ""
+  },
+  "host": "localhost:3333",
+  "basePath": "/",
+  "tags": [],
+  "schemes": [
+    "http"
+  ],
+  "consumes": [],
+  "produces": [],
+  "paths": {
+    "/users/{id}": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "description": "Endpoint para obter um usuário.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "ID do usuário."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Usuário encontrado."
+          }
+        }
+      }
+    },
+    "/somar": {
+      "post": {
+        "tags": [
+          "Math"
+        ],
+        "description": "Endpoint efetuar uma soma.",
+        "parameters": [
+          {
+            "name": "a",
+            "description": "Um número para somar",
+            "type": "number",
+            "in": "query"
+          },
+          {
+            "name": "b",
+            "description": "Um número para somar",
+            "type": "number",
+            "in": "query"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "O resultado da soma"
+          }
+        }
+      }
+    },
+    "/sub": {
+      "post": {
+        "tags": [
+          "Math"
+        ],
+        "description": "Endpoint efetuar uma subtração.",
+        "parameters": [
+          {
+            "name": "a",
+            "description": "Um número para subtrair",
+            "type": "number",
+            "in": "query"
+          },
+          {
+            "name": "b",
+            "description": "Um número para subtrair",
+            "type": "number",
+            "in": "query"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "O resultado da subtração"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {}
+}
