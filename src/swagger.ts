@@ -4,7 +4,23 @@ class Swagger {
   swagger = this.swaggerAutogen();
 
   doc = {
-    host: "localhost:3333",
+    info: {
+      version: '1.0.0',
+      title: 'API do Cássio',
+      description: 'API para demonstrar o swagger-autogen'
+    },
+    host: 'localhost:3333',
+    consumes: ['application/json'],
+    produces: ['application/json'],
+    tags: [
+      {
+        name: 'User',
+        description: "Endpoints"
+      }, {
+        name: 'Math',
+        description: 'Operações matemáticas'
+      }
+    ]
   };
 
   constructor() {

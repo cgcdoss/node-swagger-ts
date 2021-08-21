@@ -2,17 +2,30 @@
   "swagger": "2.0",
   "info": {
     "version": "1.0.0",
-    "title": "REST API",
-    "description": ""
+    "title": "API do Cássio",
+    "description": "API para demonstrar o swagger-autogen"
   },
   "host": "localhost:3333",
   "basePath": "/",
-  "tags": [],
+  "tags": [
+    {
+      "name": "User",
+      "description": "Endpoints"
+    },
+    {
+      "name": "Math",
+      "description": "Operações matemáticas"
+    }
+  ],
   "schemes": [
     "http"
   ],
-  "consumes": [],
-  "produces": [],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
   "paths": {
     "/users/{id}": {
       "get": {
@@ -25,7 +38,7 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "type": "string",
+            "type": "number",
             "description": "ID do usuário."
           }
         ],

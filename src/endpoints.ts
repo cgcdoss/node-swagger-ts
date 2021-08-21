@@ -7,7 +7,7 @@ class Endpoints {
     this.routes.get('/users/:id', (req: Request, res: Response) => {
       // #swagger.tags = ['User']
       // #swagger.description = 'Endpoint para obter um usuário.'
-      // #swagger.parameters['id'] = { description: 'ID do usuário.' }
+      // #swagger.parameters['id'] = { description: 'ID do usuário.', type: 'number' }
 
       /* #swagger.responses[200] = { 
           description: 'Usuário encontrado.' 
