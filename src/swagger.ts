@@ -29,6 +29,7 @@ class Swagger {
 
     this.swagger(outputFile, endpointsFiles, this.doc);
 
+    // Para rodar junto com a aplicação
     /* this.swagger(outputFile, endpointsFiles, this.doc).then(() => {
       require('./server.ts');
     }); */

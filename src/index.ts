@@ -2,9 +2,9 @@ import cors from 'cors';
 import express from 'express';
 import swaggerUi from 'swagger-ui-express';
 import routes from './endpoints';
+import swaggerFile from './doc/swagger_output.json';
 
 export class App {
-  swaggerFile = require('./doc/swagger_output.json');
   app!: express.Application;
 
   constructor() {
@@ -25,7 +25,7 @@ export class App {
   }
 
   private setDocsSwagger(): void {
-    this.app.use('/doc', swaggerUi.serve, swaggerUi.setup(this.swaggerFile));
+    this.app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile));
   }
 
 }
